@@ -15,7 +15,16 @@
         <a href="main.html"><h1>SAMRUDDHI</h1></a>
         <a href="main.html">Home</a>
         <a href="#">About Us</a>
-        <a href="#">Services</a>
+        <div class="dropdown">
+            <a href="#">Services</a>
+            <div class="dropdown-content">
+                <a href="#">Registration & Licences</a>
+                <a href="#">Return Filings</a>
+                <a href="#">Representation Works</a>
+                <!-- Add more services as needed -->
+            </div>
+        </div>
+
         <a href="#">Contact Us</a>
     </header>
 
@@ -43,26 +52,57 @@
         </section>
 
         <section class="section2">
-            <div class="capsule-container">
-                <div class="column">
-                    <input type="text" class="input-field" placeholder="Name">
+            <form id="myForm" action="https://formspree.io/dpdurga0077@gmail.com" method="post">
+                <div class="capsule-container">
+                    <div class="column">
+                        <input type="text" class="input-field" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="column">
+                        <input type="email" class="input-field" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="column">
+                        <input type="tel" class="input-field" name="contactNumber" placeholder="Contact Number" required>
+                    </div>
+                    <button type="submit" class="submit-button">Submit</button>
                 </div>
-                <div class="column">
-                    <input type="email" class="input-field" placeholder="Email">
-                </div>
-                <div class="column">
-                    <input type="tel" class="input-field" placeholder="Contact Number">
-                </div>
-                <button class="submit-button">Submit</button>
-            </div>
+            </form>
+            
+            
         </section>
 
         <section>
-            <h2>Section 3</h2>
-            <!-- Add content for section 3 -->
+           
+            <section class="section3">
+                <h2 class="section3-heading">Services We Provide</h2>
+                <div class="horizontal-boxes">
+                    <a href="new.html" class="box">Registration & Licences</a>
+                    <a href="new.html" class="box">Return Filings</a>
+                    <a href="new.html" class="box">Representation Works</a>
+                    
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <h2>SECTION 4</h2>
         </section>
     </main>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+    
+            // You can add additional processing here if needed
+    
+            // Show a popup message
+            alert("Request sent! Thank you.");
+    
+            // Reset the form (optional)
+            this.reset();
+        });
+    </script>
+    
 </body>
 </html>
